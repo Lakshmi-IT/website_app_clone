@@ -131,7 +131,7 @@ const categories = {
         { name: "Baby blanket", price: 30 },
     ],
 
-    Others: [
+    Household: [
         { name: "Towels", price: 20 },
         { name: "Blanket", price: 50 },
         { name: "Bed sheet", price: 30 },
