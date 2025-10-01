@@ -540,7 +540,7 @@ export default function OrderPage() {
 
 
     return (
-        <div className="max-w-full mx-auto px-5 lg:px-14 my-5 grid md:grid-cols-3 gap-6">
+        <div className="max-w-full mx-auto px-5 lg:px-14 my-5 grid md:grid-cols-3 gap-6 mb-14">
             {/* LEFT: Select Items */}
             <div className="bg-blue-50 p-6 rounded-xl shadow lg:h-[80vh] h-[fit-content]">
                 <h1 className="text-2xl font-bold mb-4 text-blue-700">

@@ -21,6 +21,9 @@ import YourOrders from "./pages/YourOrders";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import LoginPage from "./pages/LoginPage";
+import PriceList from "./components/PriceList";
+import PrivacyandPolicy from "./components/PrivacyandPolicy";
+import TermsandCondition from "./components/TermsandCondition";
 
 
 const queryClient = new QueryClient();
@@ -37,15 +40,17 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/priceList" element={<PriceList />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyandPolicy />} />
+          <Route path="/TermsandCondition" element={<TermsandCondition />} />
           <Route path="/LoginPage" element={<LoginPage />} />
           <Route path="/RegisterPage" element={<RegisterPage />} />
           <Route
             path="/placeorder"
             element={
               // <ProtectedRoute>
-                <OrderPage />
+              <OrderPage />
               // </ProtectedRoute>
             }
           />
@@ -54,7 +59,7 @@ const App = () => (
             path="/ProfilePage"
             element={
               // <ProtectedRoute>
-                <ProfilePage />
+              <ProfilePage />
               // </ProtectedRoute>
             }
           />
@@ -62,13 +67,13 @@ const App = () => (
             path="/yourorders"
             element={
               // <ProtectedRoute>
-                <YourOrders />
+              <YourOrders />
               // </ProtectedRoute>
             }
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
         <ToastContainer position="top-right" autoClose={3000} />
       </BrowserRouter>
     </TooltipProvider>

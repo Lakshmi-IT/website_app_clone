@@ -58,6 +58,7 @@ const ProfilePage = () => {
                 setUser(res.data);
                 setIsEditing(false);
                 localStorage.setItem("mobile", res?.data?.user?.mobile);
+                localStorage.setItem("name", res?.data?.user?.userName);
                 toast.success(res.data.message || "✅ Profile updated successfully!");
 
             } else {
@@ -168,33 +169,22 @@ const ProfilePage = () => {
 
 
     return (
-        <div className="container mx-auto px-4 py-10">
+        <div className="bg-white min-h-screen mb-10">
+            <div className="bg-[#042048] text-center px-6 py-6">
+                <h1 className="text-3xl font-bold text-white mb-2">Welcome to Your Profile</h1>
+                <p className="text-lg text-indigo-200 max-w-2xl mx-auto">
+                    Manage your personal details, update your contact information, and
+                    track your activity. Keep your profile up to date for a smoother
+                    experience.
+                </p>
+            </div>
             <div className="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl font-bold flex items-center gap-2">
                         <User className="h-7 w-7 text-blue-600" /> Profile Settings
                     </h2>
-                    {/* {!isEditing ? (
-                        <button
-                            type="button"
-                            onClick={() => setIsEditing(true)}
-                            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-                        >
-                            Edit
-                        </button>
-                    ) : (
-                        <button
-                            type="button"
-                            onClick={() => {
-                                setForm(user);
-                                setIsEditing(false);
-                            }}
-                            className="bg-gray-400 text-white px-4 py-2 rounded-lg hover:bg-gray-500 transition"
-                        >
-                            Cancel
-                        </button>
-                    )} */}
+
                 </div>
 
                 {/* Form */}
@@ -239,15 +229,15 @@ const ProfilePage = () => {
                     {/* Address Section with Location Button */}
                     <div className="flex justify-between items-center">
                         <h3 className="font-semibold text-lg">Address</h3>
-                        
-                            <button
-                                type="button"
-                                onClick={fillWithCurrentLocation}
-                                className="flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition"
-                            >
-                                <MapPin className="h-5 w-5" />
-                                {loadingLocation ? "Fetching..." : "Use My Location"}
-                            </button>
+
+                        <button
+                            type="button"
+                            onClick={fillWithCurrentLocation}
+                            className="flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition"
+                        >
+                            <MapPin className="h-5 w-5" />
+                            {loadingLocation ? "Fetching..." : "Use My Location"}
+                        </button>
                         {/* )} */}
                     </div>
 
