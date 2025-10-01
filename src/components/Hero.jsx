@@ -49,7 +49,7 @@ const HomeScreen = () => {
         {categories.map((cat) => (
           <button
             key={cat.id}
-            onClick={() => navigate(`/place-order?category=${cat.name}`)}
+            onClick={() => navigate(`/placeorder?category=${cat.name}`)}
             onMouseEnter={() => setActive(cat.id)}
             onMouseLeave={() => setActive(null)}
             className="border-2 rounded-lg  w-18 h-24 flex-shrink-0 transition-colors"

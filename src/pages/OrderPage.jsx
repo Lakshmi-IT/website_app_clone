@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import { ShoppingCart, PlusCircle, Trash2, LocateIcon, MapPin, CreditCard, UserPlus } from "lucide-react";
 import laundry from "../assets/Laundry.png"
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { BASE_URL } from "../utils/url"
+// import { useParams } from 'react-router-dom';
+
 
 
 const categories = {
-    men: [
+    Men: [
         { name: "Men shirt", price: 20 },
         { name: "T-shirt", price: 20 },
         { name: "Pant", price: 20 },
@@ -41,7 +43,7 @@ const categories = {
         { name: "Underwears", price: 15 },
     ],
 
-    women: [
+    Women: [
         { name: "Kurta plane", price: 20 },
         { name: "Salwar plain", price: 20 },
         { name: "Top plane", price: 20 },
@@ -93,7 +95,7 @@ const categories = {
         { name: "Nighties", price: 20 },
     ],
 
-    kids: [
+    Kids: [
         { name: "T-shirt", price: 15 },
         { name: "Shirt", price: 15 },
         { name: "Pant", price: 15 },
@@ -129,7 +131,7 @@ const categories = {
         { name: "Baby blanket", price: 30 },
     ],
 
-    others: [
+    Others: [
         { name: "Towels", price: 20 },
         { name: "Blanket", price: 50 },
         { name: "Bed sheet", price: 30 },
@@ -147,7 +149,17 @@ const categories = {
 
 
 export default function OrderPage() {
-    const [selectedCategory, setSelectedCategory] = useState("men");
+    //   const { category } = useParams(); 
+
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const category = searchParams.get('category'); // "Kids"
+
+    console.log(category, "category");
+
+
+
+    const [selectedCategory, setSelectedCategory] = useState(category || "Men");
     const [selectedItem, setSelectedItem] = useState("");
     const [qty, setQty] = useState(1);
     const [cart, setCart] = useState([]);

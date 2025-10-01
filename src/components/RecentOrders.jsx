@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ShoppingBag, Truck, Clock, XCircle } from "lucide-react";
+import { BASE_URL } from "../utils/url";
 
 // Status colors
 const statusColors = {
@@ -65,7 +66,7 @@ const RecentOrders = () => {
       try {
         const mobile = localStorage.getItem("mobile");
         const res = await fetch(
-          `http://localhost:5000/api/orders/my-orders/${mobile}`
+          `${BASE_URL}api/orders/my-orders/${mobile}`
         );
         const data = await res.json();
         if (data.success) {
