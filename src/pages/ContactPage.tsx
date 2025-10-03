@@ -54,8 +54,8 @@ const ContactScreen = () => {
     <div className="bg-white min-h-screen mb-10">
       {/* Hero Section */}
       <div className="bg-[#042048] text-center px-6 py-6">
-        <h1 className="text-3xl font-bold text-white mb-2">Contact Us</h1>
-        <p className="text-lg text-indigo-200 max-w-2xl mx-auto">
+        <h1 className="text-xl font-bold text-white mb-2">Contact Us</h1>
+        <p className="text-md text-indigo-200 max-w-2xl mx-auto">
           Get in touch with Andhra Pradesh's most trusted Ironing service. We're
           here to help with all your clothing care needs.
         </p>

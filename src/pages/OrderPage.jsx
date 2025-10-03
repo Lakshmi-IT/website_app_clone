@@ -143,7 +143,6 @@ const categories = {
         { name: "Uniform set", price: 50 },
         { name: "Sofa covers", price: 50 },
     ]
-
 };
 
 
@@ -555,7 +554,7 @@ export default function OrderPage() {
         <div className="max-w-full mx-auto px-5 lg:px-14 my-5 grid md:grid-cols-3 gap-6 mb-14">
             {/* LEFT: Select Items */}
             <div className="bg-blue-50 p-6 rounded-xl shadow lg:h-[80vh] h-[fit-content]">
-                <h1 className="text-2xl font-bold mb-4 text-blue-700">
+                <h1 className="text-xl font-bold mb-4 text-blue-700">
                     Select Items <PlusCircle className="inline ml-2" />
                 </h1>
 
@@ -701,7 +700,7 @@ export default function OrderPage() {
 
             {/* RIGHT: Cart */}
             <div className="bg-white p-6 rounded-xl shadow lg:h-[80vh]  h-[fit-content]">
-                <h2 className="text-2xl font-bold mb-4 text-blue-700 flex items-center">
+                <h2 className="text-xl font-bold mb-4 text-blue-700 flex items-center">
                     <ShoppingCart className="mr-2" /> Your Cart
                 </h2>
 
@@ -765,7 +764,7 @@ export default function OrderPage() {
 
             {/* address */}
             <div className="bg-white p-6 rounded-xl shadow lg:h-[80vh] h-[fit-content] overflow-y-auto">
-                <h2 className="text-2xl font-bold mb-4 text-blue-700 flex items-center">
+                <h2 className="text-xl font-bold mb-4 text-blue-700 flex items-center">
                     <MapPin className="mr-2" /> Delivery Address
                 </h2>
 
@@ -856,8 +855,7 @@ export default function OrderPage() {
 
                 {/* Place Order */}
                 <div className="mt-4 font-bold text-lg text-blue-800"> Total: ₹{totalAmount} </div>
-                {console.log(address, "address")}
-                {console.log(address.length, "address length")}
+              
 
 
                 {/* // then render */}

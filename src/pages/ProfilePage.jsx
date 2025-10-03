@@ -171,8 +171,8 @@ const ProfilePage = () => {
     return (
         <div className="bg-white min-h-screen mb-10">
             <div className="bg-[#042048] text-center px-6 py-6">
-                <h1 className="text-3xl font-bold text-white mb-2">Welcome to Your Profile</h1>
-                <p className="text-lg text-indigo-200 max-w-2xl mx-auto">
+                <h1 className="text-xl font-bold text-white mb-2">Welcome to Your Profile</h1>
+                <p className="text-md text-indigo-200 max-w-2xl mx-auto">
                     Manage your personal details, update your contact information, and
                     track your activity. Keep your profile up to date for a smoother
                     experience.

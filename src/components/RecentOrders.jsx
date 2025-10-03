@@ -88,7 +88,7 @@ const RecentOrders = () => {
     <div className="mb-12 bg-white p-4">
       {/* Recent Orders */}
       {orders.length > 0 && (
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="text-xl font-bold text-gray-700 mb-2">
           Recent Orders
         </h2>
       )}
@@ -99,7 +99,7 @@ const RecentOrders = () => {
       </div>
 
       {/* Orders History */}
-      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+      <h2 className="text-xl font-bold text-gray-700 mt-8 mb-4">
         Orders History
       </h2>
 

@@ -70,7 +70,7 @@ export default function YourOrders() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">My Orders</h1>
+      <h1 className="text-xl font-bold mb-4">My Orders</h1>
 
       {orders.length === 0 ? (
         <p>You have no orders yet.</p>

@@ -67,11 +67,11 @@ const HomeScreen = () => {
       </div>
 
       {/* Manual Order */}
-      <h2 className="text-lg font-bold text-gray-700 mt-4 mb-2">Order Now</h2>
-      <div className="flex gap-4">
+      <h2 className="text-lg font-bold text-gray-700 mt-4 mb-2">ORDER NOW</h2>
+      <div className="flex gap-4 h-[40px]">
         <button
-          onClick={() => navigate("/place-order")}
-          className="flex-1 flex items-center justify-center gap-2 bg-[#042048] text-white py-0 rounded-lg font-semibold"
+          onClick={() => navigate("/placeorder")}
+          className="flex-1 flex items-center justify-center gap-2 bg-[#042048] text-white py-0 rounded-md font-semibold"
         >
           <ShoppingCart className="h-5 w-5" />
           Place Order
@@ -79,7 +79,7 @@ const HomeScreen = () => {
 
         <button
           onClick={openWhatsApp}
-          className="flex-1 flex items-center justify-center gap-2 bg-[#042048] text-white py-3 rounded-lg font-semibold"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#042048] text-white py-3 rounded-md font-semibold"
         >
           <FaWhatsapp  className="h-5 w-5" />
           Message Us
